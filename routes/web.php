@@ -18,4 +18,5 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     CRUD::resource('make', 'Admin\MakeCrudController');
     CRUD::resource('model', 'Admin\ModelCrudController');
+    CRUD::resource('car', 'Admin\CarCrudController');
 });
