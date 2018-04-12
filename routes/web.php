@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
+    CRUD::resource('make', 'Admin\MakeCrudController');
+});
